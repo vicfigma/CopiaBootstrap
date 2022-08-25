@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="faviconV2.png">
+    <title>Free - Theme Preview - Start Bootstrap</title>
+     <style>* {
+       margin: 0%;
+       padding: 0%;
+       font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+       --negro: #2c3e50;
+       }
+     </style>
+    
+     <style>.negro {
+       background-color: var(--negro);
+       }
+     </style>
+     
+     <style>.snegro {
+       color: #2c3e50;
+       }
+     </style>
+     <style>h1{
+       text-align: center;
+       }
+     </style>
+     <style>header {
+       background-color: #1abc9c;
+       color: aliceblue;
+       text-align: center;
+       height: 754px;
+       }
+     </style>
+
+     <style>nav {
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       height: 100px;
+       background-color: #2c3e50;
+       /* position: fixed; */
+       }
+     </style>
+     
+     <style>nav a{
+       text-decoration: none;
+       color: #fff;
+       }
+     </style>
+     
+     <style>nav ul {
+       display: flex;
+       list-style: none;
+       gap: 10px;
+       }
+     </style>
+     <style>.navMenu a{
+       color: aliceblue;
+       font-weight: 700;
+       text-decoration: none;
+       padding: 16px;
+       }
+     </style>
+     
+     <style>.navMenu a:hover{
+       color: #1abc9c;
+       }
+     </style>
+
+     <style>.navMenu a:active{
+       color: aliceblue;
+       background-color: #1abc9c;
+       border-radius: 10px;
+       padding: 16px;
+       }
+     </style>
+     <style>.imgHead {
+       width: 15rem;
+       margin: auto;
+       margin-top: 90px;
+       margin-bottom: 40px;
+       }
+     </style>
+     
+     <style>.titleHead{
+       font-size: 60px;
+       }
+     </style>
+    
+     <style>.textHead{
+       font-size: 25px;
+       font-weight: 400;
+       }
+     </style>
+
+     <style>main h1{
+       font-size: 50px;
+       color: #2c3e50;
+       margin-top: 90px;
+       }
+     </style>
+     
+     <style>.contLineStar {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 30px;
+       color: aliceblue;
+       }
+     </style>
+     
+     <style>.lineaW {
+       width: 110px;
+       height: 4px;
+       margin: 0 20px;
+       background-color: white;
+       border-radius: 10px;
+       }
+     </style>
+
+     <style>.lineaB {
+       width: 110px;
+       height: 4px;
+       margin: 0 20px;
+       background-color: #2c3c50;
+       border-radius: 10px;
+       }
+     </style>
+
+            <style>.portafolio {
+       height: 790px;
+       }
+     </style>
+     
+     <style>.fila {
+       display: flex;
+       justify-content: center;
+       margin-bottom: 20px;
+       }
+     </style>
+    
+     <style>.fila figure{
+       position: relative;
+       width: 356px;
+       height: 257px;
+       margin: 12px;
+       border-radius: 9px;
+       overflow: hidden;
+       cursor: pointer;
+       }
+     </style>
+    
+    <style>.fila img {
+       width: 100%;
+       height: 100%;
+       transition: all 500ms ease-out;
+       }
+     </style>
+     
+     <style>.cambio{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: absolute;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       background-color: #1abc9cd8;
+       transition: all 500ms ease-out;
+       opacity: 0;
+       visibility: hidden;
+       }
+     </style>
+     
+     <style>.fila .cambio i{
+       color: #fff;
+       font-size: 70px;
+       }
+     </style>
+    
+    <style>.fila figure:hover > .cambio{
+       opacity: 1;
+       visibility: visible;
+       }
+     </style>
+    
+    
+    
+    <style>.about {
+       background-color: #1abc9c;
+       color: aliceblue;
+       height: 610px;
+       }
+     </style>
+    
+    <style>.h1About {
+       margin-top: 90px;
+       color: aliceblue;
+       }
+     </style>
+    
+    <style>.text {
+       display: flex;
+       justify-content: center;
+       gap: 12px;
+       }
+     </style>
+     
+     <style>.text p {
+       width: 356px;
+       height: 150px;
+       margin: 24px;
+       font-size: 20px;
+       line-height: 30px;
+       color: aliceblue;
+       }
+     </style>
+    
+     <style>.contbtmabout {
+       display: flex;
+       justify-content: center;
+       margin-top: 40px;
+       }
+     </style>
+    
+    <style>.btmabout {
+       border: #fff solid 2px;
+       border-radius: 10px;
+       padding: 16px 28px;
+       font-size: 20px;
+       color: aliceblue;
+       text-decoration: none;
+       }
+     </style>
+     
+     <style>.btmabout:hover{
+       color: #000;
+       background-color: aliceblue;
+       }
+     </style>
+     
+     <style>.btmabout:active{
+       box-shadow: 0 0 0px 4px rgba(255, 255, 255, 0.5);
+       transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+       }
+     </style>
+    
+     <style>.btmabout i {
+       margin-right: 10px;
+       }
+     </style>
+    
+    
+    
+     <style>.contactme {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       }
+     </style>
+    
+    <style>.contformulario {
+       width: 641px;
+       height: 654px;
+       margin-top: 50px;
+       }
+     </style>
+     
+     <style>.contformulario form {
+       font-size: 1.5rem;
+       }
+     </style>
+    
+    
+     
+    <style>.form__group {
+       position: relative;
+       padding: 20px 0 0;
+       margin-top: 10px;
+       width: 654px;
+       max-width: 585vw;
+       }
+     </style>
+     
+     <style>.form__field {
+       font-family: inherit;
+       width: 100%;
+       border: none;
+       border-bottom: 1px solid #b3b1b1;
+       outline: 0;
+       font-size: 20px;
+       color: #000;
+       padding: 7px 0;
+       background: transparent;
+       transition: border-color 0.2s;
+       }
+     </style>
+    
+     <style>.form__field::placeholder {
+       color: transparent;
+       }
+     </style>
+    
+     <style>.form__field:placeholder-shown~.form__label {
+       font-size: 24px;
+       cursor: text;
+       top: 20px;
+       }
+     </style>
+    
+     <style>.form__label {
+       position: absolute;
+       top: 0;
+       display: block;
+       transition: 0.2s;
+       font-size: 17px;
+       color: #9b9b9b;
+       pointer-events: none;
+       }
+     </style>
+    
+    <style>.form__field:focus {
+       padding-bottom: 6px;
+       font-weight: 700;
+       border-bottom: #1abc9c 1px solid;
+       border-image: #1abc9c;
+       border-image-slice: 1;
+       }
+     </style>
+    
+     <style>.form__field:focus~.form__label {
+       position: absolute;
+       top: 0;
+       display: block;
+       transition: 0.2s;
+       font-size: 16px;
+       color: #9b9b9b;
+       font-weight: 450;
+       }
+     </style>
+    
+     <style>.form__field:required,
+       .form__field:invalid {
+       box-shadow: none;
+       }
+     </style>
+     
+     <style>.formTextArea {
+       max-width: 45vw;
+       border: 2px solid #9b9b9b;
+       margin-bottom: 200px;
+       }
+     </style>
+     
+     
+    
+     <style>.btnform {
+       text-decoration: none;
+       padding: 20px 30px;
+       font-size: 20px;
+       font-weight: 500;
+       color: #fff;
+       background-color: #1abc9cb2;
+       border-radius: 10px;
+       }
+     </style>
+     
+     <style>.btnform:hover{
+       background-color: #1abc9c;
+       }
+     </style>
+     
+     <style>.btnf {
+       margin-top: 40px;
+       }
+     </style>
+    
+    
+    
+    <style>.footp {
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+       text-align: center;
+       font-size: 20px;
+       color: #fff;
+       background-color: #2c3e50;
+       height: 302.8px;
+       padding-left: 150px;
+       padding-bottom: 20px;
+       }
+     </style>
+    
+    <style>.footp h1{
+       font-size: 25px;
+       margin: 20px;
+       }
+     </style>
+    
+     <style>.icons {
+       display: flex;
+       justify-content: center;
+       }
+     </style>
+     
+     <style>.footp .i {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 19px;
+       border: #fff solid 2px;
+       border-radius: 50%;
+       width: 48px;
+       height: 48px;
+       margin: 0px 6px;
+       }
+     </style>
+     
+     <style>.footp .i:hover{
+       cursor: pointer;
+       background-color: aliceblue;
+       }
+     </style>
+     <style>.i a{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-decoration: none;
+       color: aliceblue;
+       width: 100%;
+       height: 100%;
+       }
+     </style>
+     
+     <style>.i a:hover{
+       color: #000;
+       }
+     </style>
+
+     <style>.textRigth{
+       width: 350px;
+       }
+     </style>
+
+     <style>.textRigth a{
+       color: #1abc9c;
+       }
+     </style>
+
+     <style>.copy {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-color: #20242c;
+       font-size: 14px;
+       text-align: center;
+       color: #fff;
+       height: 72px;
+       }
+     </style>
+    
+    
+</head>
+<body>
+  <header>
+    <nav>
+      <a href=""><h1>START BOOTSTRAP</h1></a>
+      <ul class="navMenu">
+        <li><a href="#portafolio">PORTFOLIO</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="imgHead"><img src="perfil.svg" alt="" /></div>
+    <h1 class="titleHead">START BOOTSTRAP</h1>
+    &nbsp;
+    <div class="contLineStar">
+      <div class="lineaW"></div>
+      <i class="fa-solid fa-star"></i>
+      <div class="lineaW"></div>
+    </div>
+    &nbsp;
+    <h4 class="textHead">Graphic Artist - Web Disigner - Illustrator</h4>
+  </header>
+  <main>
+    <section id="portafolio" class="portafolio">
+      <h1>PORTFOLIO</h1>
+      &nbsp;
+      <div class="contLineStar">
+        <div class="lineaB"></div>
+        <i class="fa-solid fa fa-star"></i>
+        <div class="lineaB"></div>
+      </div>
+      &nbsp;
+      <section class="contCards">
+        <div class="fila">
+          <figure>
+            <img src="cabin.png" alt="" />
+            <div class="cambio">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </figure>
+          <figure>
+            <img src="cake.png" alt="" />
+            <div class="cambio">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </figure>
+          <figure>
+            <img src="circus.png" alt="" />
+            <div class="cambio">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </figure>
+        </div>
+        <div class="fila">
+          <figure>
+            <img src="game.png" alt="" />
+            <div class="cambio">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </figure>
+          <figure>
+            <img src="safe.png" alt="" />
+            <div class="cambio">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </figure>
+          <figure>
+            <img src="submarine.png" alt="" />
+            <div class="cambio">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </figure>
+        </div>
+      </section>
+    </section>
+
+    <section id="about" class="about">
+      &nbsp; &nbsp;
+      <h1 class="h1About">ABOUT</h1>
+      &nbsp;
+      <div class="contLineStar">
+        <div class="lineaW"></div>
+        <i class="fa-solid fa-star"></i>
+        <div class="lineaW"></div>
+      </div>
+      <div class="text">
+        <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+        <p>You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
+      </div>
+      <div class="contbtmabout">
+        <a class="btmabout" href="">
+          <i class="fa-solid fa-download"></i>Free Download!
+        </a>
+      </div>
+    </section>
+    <section id="contact" class="contactme">
+      &nbsp; &nbsp;
+      <h1>CONTACT ME</h1>
+      &nbsp;
+      <div class="contLineStar">
+        <div class="lineaB"></div>
+        <i class="fa-solid fa-star snegro"></i>
+        <div class="lineaB"></div>
+      </div>
+      <div class="contformulario">
+        <form action="">
+          <div class="form__group field">
+            <input placeholder="Ful name"class="form__field"type="text"name="nombre"id=""/>
+            <label class="form__label" for="nombre">Full name</label>
+          </div>
+          <div class="form__group field">
+            <input required="A name is required"placeholder="Email"class="form__field"type="email"/>
+            <label class="form__label" for="email">Correo</label>
+          </div>
+          <div class="form__group field">
+            <input placeholder="Email"class="form__field"type="tel"name="phone"id=""/>
+            <label class="form__label" for="phone">Phone number</label>
+          </div>
+          <div class="form__group field">
+            <textarea placeholder="Email"class="form__field"name="msg"id=""cols="30"rows="4"></textarea>
+            <label class="form__label" for="msg">Message</label>
+          </div>
+          <div class="btnf">
+            <a class="btnform" href="">Send</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <div class="footp">
+      <div class="colum">
+        <h1>LOCATION</h1>
+        <p>2215 John Daniel Drive</p>
+        <p>Clark, MO 65243</p>
+      </div>
+      <div class="colum">
+        <h1>AROUND THE WEB</h1>
+        <div class="icons">
+          <div class="i"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+          <div class="i"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></div>
+          <div class="i"><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>
+          <div class="i"><a href="" target="_blank"><i class="fa-brands fa-dribbble"></i></a></div>
+        </div>
+      </div>
+      <div class="colum">
+        <h1>ABOUT FREELANCER</h1>
+        <p class="textRigth">Freelance is a free to use, MIT licensed
+        Bootstrap theme created by <a href=""> Start
+        Bootstrap</a></p>
+      </div>
+    </div>
+    <div class="copy">
+      <p>Copyright © Your Website 2022</p>
+    </div>
+  </footer>
+
+</body>
+</html>
